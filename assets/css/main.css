@@ -19,7 +19,7 @@ canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
-	padding: 0;
+	padding: 10;
 	border: 0;
 	font-size: 100%;
 	font: inherit;
@@ -3880,3 +3880,24 @@ input, select, textarea {
 		}
 
 	}
+
+	#nav {
+    position: absolute;
+    top: 20px;      /* vzdálenost od horního okraje */
+    right: 20px;    /* vzdálenost od pravého okraje */
+	z-index: 9999; 
+}
+
+/* Položky vedle sebe */
+#nav ul {
+    list-style: none;
+    display: flex; /* aby šly za sebou */
+    gap: 20px;     /* mezery mezi položkami */
+}
+
+/* Odkazy */
+#nav ul li a {
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 8px 12px;
+}
